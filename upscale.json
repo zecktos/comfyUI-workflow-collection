@@ -1,88 +1,191 @@
 {
-  "last_node_id": 6,
-  "last_link_id": 6,
+  "id": "303d1c81-0a24-4604-8ec7-5ad37b41a918",
+  "revision": 0,
+  "last_node_id": 10,
+  "last_link_id": 10,
   "nodes": [
     {
-      "id": 3,
-      "type": "ImageUpscaleWithModel",
-      "pos": {
-        "0": 850,
-        "1": 540
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        485.87603305785143,
+        606.487603305785
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            1,
+            7
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
       },
-      "size": {
-        "0": 340.20001220703125,
-        "1": 46
+      "widgets_values": [
+        "ComfyUI_temp_ezlnv_00053_.png",
+        "image"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 1,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        492.89256198347186,
+        487.10743801652944
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "slot_index": 0,
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
       },
+      "widgets_values": [
+        "RealESRGAN_x4plus.pth"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 5,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        486.85950413223173,
+        365.2066115702486
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "RealESRGAN_x2plus.pth"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 7,
+      "type": "PreviewImage",
+      "pos": [
+        1280.5823354545428,
+        491.1962481818185
+      ],
+      "size": [
+        589.090909090909,
+        552.3636363636363
+      ],
       "flags": {},
       "order": 3,
       "mode": 0,
       "inputs": [
         {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 2
-        },
-        {
-          "name": "image",
+          "name": "images",
           "type": "IMAGE",
-          "link": 1
+          "link": 7
         }
       ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            5
-          ],
-          "slot_index": 0
-        }
-      ],
+      "outputs": [],
+      "title": "original Image",
       "properties": {
-        "Node name for S&R": "ImageUpscaleWithModel"
+        "Node name for S&R": "PreviewImage"
       },
-      "widgets_values": []
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     },
     {
       "id": 4,
       "type": "PreviewImage",
-      "pos": {
-        "0": 1642,
-        "1": 528
-      },
-      "size": {
-        "0": 210,
-        "1": 26
-      },
+      "pos": [
+        1893.286127272727,
+        406.440616363636
+      ],
+      "size": [
+        712,
+        612
+      ],
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 6
+          "link": 10
         }
       ],
       "outputs": [],
+      "title": "upscaled Image",
       "properties": {
         "Node name for S&R": "PreviewImage"
       },
-      "widgets_values": []
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
     },
     {
       "id": 6,
       "type": "ImageUpscaleWithModel",
-      "pos": {
-        "0": 1255,
-        "1": 524
-      },
-      "size": {
-        "0": 340.20001220703125,
-        "1": 46
-      },
+      "pos": [
+        983.7354545454539,
+        391.0527272727277
+      ],
+      "size": [
+        340.20001220703125,
+        46
+      ],
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 4,
       "inputs": [
         {
@@ -100,10 +203,10 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
-            6
-          ],
-          "slot_index": 0
+            10
+          ]
         }
       ],
       "properties": {
@@ -112,106 +215,45 @@
       "widgets_values": []
     },
     {
-      "id": 1,
-      "type": "UpscaleModelLoader",
-      "pos": {
-        "0": 450,
-        "1": 380
-      },
-      "size": {
-        "0": 315,
-        "1": 58
-      },
+      "id": 3,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        837.9127272727262,
+        499.243636363636
+      ],
+      "size": [
+        340.20001220703125,
+        46
+      ],
       "flags": {},
-      "order": 0,
+      "order": 4,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
+      "inputs": [
         {
-          "name": "UPSCALE_MODEL",
+          "name": "upscale_model",
           "type": "UPSCALE_MODEL",
-          "links": [
-            2
-          ],
-          "slot_index": 0
+          "link": 2
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1
         }
       ],
-      "properties": {
-        "Node name for S&R": "UpscaleModelLoader"
-      },
-      "widgets_values": [
-        "RealESRGAN_x4plus.pth"
-      ]
-    },
-    {
-      "id": 5,
-      "type": "UpscaleModelLoader",
-      "pos": {
-        "0": 920,
-        "1": 330
-      },
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "links": [
-            4
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UpscaleModelLoader"
-      },
-      "widgets_values": [
-        "RealESRGAN_x2plus.pth"
-      ]
-    },
-    {
-      "id": 2,
-      "type": "LoadImage",
-      "pos": {
-        "0": 281,
-        "1": 525
-      },
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
-            1
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
+            5
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "LoadImage"
+        "Node name for S&R": "ImageUpscaleWithModel"
       },
-      "widgets_values": [
-        "1772.jpg.webp",
-        "image"
-      ]
+      "widgets_values": []
     }
   ],
   "links": [
@@ -248,7 +290,15 @@
       "IMAGE"
     ],
     [
-      6,
+      7,
+      2,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
       6,
       0,
       4,
@@ -262,13 +312,14 @@
     "ds": {
       "scale": 1,
       "offset": [
-        -118,
-        132
+        -258.68644640742923,
+        -186.6194494681352
       ]
     },
     "node_versions": {
       "comfy-core": "v0.2.3"
-    }
+    },
+    "frontendVersion": "1.28.9"
   },
   "version": 0.4
 }
