@@ -1,0 +1,1182 @@
+{
+  "id": "2a645c5e-bdfc-49ac-8c50-f001c8e4482c",
+  "revision": 0,
+  "last_node_id": 97,
+  "last_link_id": 174,
+  "nodes": [
+    {
+      "id": 88,
+      "type": "PreviewImage",
+      "pos": [
+        729.8931884765625,
+        964.3394775390625
+      ],
+      "size": [
+        1052.841552734375,
+        952.8145751953125
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 159
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 46,
+      "type": "PreviewImage",
+      "pos": [
+        719.4636840820312,
+        -65.62154388427734
+      ],
+      "size": [
+        1022.591552734375,
+        970.9645385742188
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 117
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 48,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -1586.052490234375,
+        494.6067199707031
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            120,
+            162
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 40,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -1591.8768310546875,
+        258.37164306640625
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            145,
+            157
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            146,
+            158
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            141,
+            161
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_base_1.0.safetensors"
+      ]
+    },
+    {
+      "id": 87,
+      "type": "VAEDecode",
+      "pos": [
+        507.5740661621094,
+        945.482421875
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 160
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 161
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            159
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 45,
+      "type": "VAEDecode",
+      "pos": [
+        472.11016845703125,
+        -17.07061195373535
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 116
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 141
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            117
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 50,
+      "type": "KSampler",
+      "pos": [
+        199.52842712402344,
+        -0.4710536003112793
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 142
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 118
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 119
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 120
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 151
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 164
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": 166
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            116
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        1663162173007,
+        "randomize",
+        30,
+        9,
+        "dpmpp_3m_sde_gpu",
+        "exponential",
+        0.8000000000000002
+      ]
+    },
+    {
+      "id": 83,
+      "type": "KSampler",
+      "pos": [
+        139.65599060058594,
+        985.357666015625
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 152
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 153
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 154
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 162
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 163
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 165
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": 167
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            160
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        693924393280501,
+        "randomize",
+        30,
+        9,
+        "dpmpp_3m_sde_gpu",
+        "exponential",
+        0.8000000000000002
+      ]
+    },
+    {
+      "id": 89,
+      "type": "PrimitiveInt",
+      "pos": [
+        -113.85440063476562,
+        565.9677734375
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            164,
+            165
+          ]
+        }
+      ],
+      "title": "Steps",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        30,
+        "fixed"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 90,
+      "type": "PrimitiveFloat",
+      "pos": [
+        -118.2466812133789,
+        702.1287231445312
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            166,
+            167
+          ]
+        }
+      ],
+      "title": "CFG",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PrimitiveFloat"
+      },
+      "widgets_values": [
+        9
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 47,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -113.60670471191406,
+        158.2926025390625
+      ],
+      "size": [
+        425.2799987792969,
+        180.61000061035156
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 144
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 172
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -113.26840209960938,
+        67.0865707397461
+      ],
+      "size": [
+        422.8500061035156,
+        164.30999755859375
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 143
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            118
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "fmailydia, close up photo of a man in suite with necktie in the laughing camera at the beach, (eyes wide open:1.4), (romantic comedy:1.1)"
+      ]
+    },
+    {
+      "id": 85,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -145.22531127929688,
+        1037.85986328125
+      ],
+      "size": [
+        422.8500061035156,
+        164.30999755859375
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 155
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 173
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            153
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "fmailydia, close up photo of a man in suite with necktie in the laughing camera at the beach, (eyes wide open:1.4), (romantic comedy:1.1)"
+      ]
+    },
+    {
+      "id": 86,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -109.85696411132812,
+        1088.6173095703125
+      ],
+      "size": [
+        425.2799987792969,
+        180.61000061035156
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 156
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 174
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            154
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark"
+      ]
+    },
+    {
+      "id": 97,
+      "type": "StringConstantMultiline",
+      "pos": [
+        -963.4627685546875,
+        799.4334106445312
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            172,
+            174
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.0",
+        "Node name for S&R": "StringConstantMultiline"
+      },
+      "widgets_values": [
+        "text, watermark",
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 78,
+      "type": "PrimitiveInt",
+      "pos": [
+        -118.26329040527344,
+        441.7033996582031
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            151,
+            163
+          ]
+        }
+      ],
+      "title": "Seed",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        -918547066390263,
+        "randomize"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 96,
+      "type": "StringConstantMultiline",
+      "pos": [
+        -977.7835083007812,
+        373.6587219238281
+      ],
+      "size": [
+        502.48699951171875,
+        270.5429992675781
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            170,
+            173
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.0",
+        "Node name for S&R": "StringConstantMultiline"
+      },
+      "widgets_values": [
+        "fmailydia, close up photo of a man in suite with necktie in the laughing camera at the beach, (eyes wide open:1.4), (romantic comedy:1.1)",
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 75,
+      "type": "LoraLoader",
+      "pos": [
+        -1252.0921630859375,
+        33.60385513305664
+      ],
+      "size": [
+        354.70001220703125,
+        171.10000610351562
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 145
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 146
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            142
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            143,
+            144
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "sdxl-fmailydia-000070.safetensors",
+        0.7000000000000002,
+        1.0000000000000002
+      ]
+    },
+    {
+      "id": 84,
+      "type": "LoraLoader",
+      "pos": [
+        -1427.3017578125,
+        843.8977661132812
+      ],
+      "size": [
+        354.70001220703125,
+        171.10000610351562
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 157
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 158
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            152
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            155,
+            156
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "sdxl-fmailydia.safetensors",
+        0.7000000000000002,
+        1.0000000000000002
+      ]
+    }
+  ],
+  "links": [
+    [
+      116,
+      50,
+      0,
+      45,
+      0,
+      "LATENT"
+    ],
+    [
+      117,
+      45,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      118,
+      49,
+      0,
+      50,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      119,
+      47,
+      0,
+      50,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      120,
+      48,
+      0,
+      50,
+      3,
+      "LATENT"
+    ],
+    [
+      141,
+      40,
+      2,
+      45,
+      1,
+      "VAE"
+    ],
+    [
+      142,
+      75,
+      0,
+      50,
+      0,
+      "MODEL"
+    ],
+    [
+      143,
+      75,
+      1,
+      49,
+      0,
+      "CLIP"
+    ],
+    [
+      144,
+      75,
+      1,
+      47,
+      0,
+      "CLIP"
+    ],
+    [
+      145,
+      40,
+      0,
+      75,
+      0,
+      "MODEL"
+    ],
+    [
+      146,
+      40,
+      1,
+      75,
+      1,
+      "CLIP"
+    ],
+    [
+      151,
+      78,
+      0,
+      50,
+      4,
+      "INT"
+    ],
+    [
+      152,
+      84,
+      0,
+      83,
+      0,
+      "MODEL"
+    ],
+    [
+      153,
+      85,
+      0,
+      83,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      154,
+      86,
+      0,
+      83,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      155,
+      84,
+      1,
+      85,
+      0,
+      "CLIP"
+    ],
+    [
+      156,
+      84,
+      1,
+      86,
+      0,
+      "CLIP"
+    ],
+    [
+      157,
+      40,
+      0,
+      84,
+      0,
+      "MODEL"
+    ],
+    [
+      158,
+      40,
+      1,
+      84,
+      1,
+      "CLIP"
+    ],
+    [
+      159,
+      87,
+      0,
+      88,
+      0,
+      "IMAGE"
+    ],
+    [
+      160,
+      83,
+      0,
+      87,
+      0,
+      "LATENT"
+    ],
+    [
+      161,
+      40,
+      2,
+      87,
+      1,
+      "VAE"
+    ],
+    [
+      162,
+      48,
+      0,
+      83,
+      3,
+      "LATENT"
+    ],
+    [
+      163,
+      78,
+      0,
+      83,
+      4,
+      "INT"
+    ],
+    [
+      164,
+      89,
+      0,
+      50,
+      5,
+      "INT"
+    ],
+    [
+      165,
+      89,
+      0,
+      83,
+      5,
+      "INT"
+    ],
+    [
+      166,
+      90,
+      0,
+      50,
+      6,
+      "FLOAT"
+    ],
+    [
+      167,
+      90,
+      0,
+      83,
+      6,
+      "FLOAT"
+    ],
+    [
+      170,
+      96,
+      0,
+      49,
+      1,
+      "STRING"
+    ],
+    [
+      172,
+      97,
+      0,
+      47,
+      1,
+      "STRING"
+    ],
+    [
+      173,
+      96,
+      0,
+      85,
+      1,
+      "STRING"
+    ],
+    [
+      174,
+      97,
+      0,
+      86,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7513148009015779,
+      "offset": [
+        441.8770580212817,
+        -64.70748626708566
+      ]
+    },
+    "frontendVersion": "1.18.9",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
