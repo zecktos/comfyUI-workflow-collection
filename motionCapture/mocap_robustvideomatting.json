@@ -1,0 +1,962 @@
+{
+  "id": "f6fc7b20-9b0b-4ae6-87ec-f7fcdeca2310",
+  "revision": 0,
+  "last_node_id": 172,
+  "last_link_id": 356,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "HYMotionRetargetFBX",
+      "pos": [
+        1843.2565479050097,
+        972.6212679601409
+      ],
+      "size": [
+        278.2837890625,
+        390
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "motion_data",
+          "type": "HYMOTION_DATA",
+          "link": 2
+        },
+        {
+          "name": "output_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "output_dir"
+          },
+          "link": 348
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 347
+        }
+      ],
+      "outputs": [
+        {
+          "name": "fbx_path",
+          "type": "STRING",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "fbx",
+          "type": "FBX",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "PozzettiAndrea/ComfyUI-HyMotion",
+        "ver": "7858ac064e19f126e56382c070ced3ef111aa4b6",
+        "Node name for S&R": "HYMotionRetargetFBX",
+        "cnr_id": "ComfyUI-HyMotion"
+      },
+      "widgets_values": [
+        "3d/mixamo.fbx",
+        "hymotion_retarget",
+        "retarget_test_eminem",
+        "",
+        0,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        30,
+        "T-Pose"
+      ],
+      "widgets_values_named": {
+        "target_fbx": "3d/mixamo.fbx",
+        "output_dir": "hymotion_retarget",
+        "filename_prefix": "retarget_test_eminem",
+        "mapping_file": "",
+        "yaw_offset": 0,
+        "neutral_fingers": true,
+        "unique_names": false,
+        "in_place": true,
+        "in_place_x": false,
+        "in_place_y": false,
+        "in_place_z": false,
+        "preserve_position": false,
+        "fps": 30,
+        "target_pose_type": "T-Pose"
+      }
+    },
+    {
+      "id": 6,
+      "type": "Preview3D",
+      "pos": [
+        945.4030943869607,
+        1445.9847101336843
+      ],
+      "size": [
+        862.9207434730033,
+        811.1446940107619
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "name": "bg_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model_file",
+          "type": "STRING,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+          "widget": {
+            "name": "model_file"
+          },
+          "link": 4
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.13.0",
+        "Node name for S&R": "Preview3D",
+        "Last Time Model File": "hymotion_retarget/retarget_test_000.fbx",
+        "Scene Config": {
+          "showGrid": true,
+          "backgroundColor": "#282828",
+          "backgroundImage": "",
+          "backgroundRenderMode": "tiled",
+          "models": [
+            {
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "quaternion": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          ]
+        },
+        "Camera Config": {
+          "cameraType": "perspective",
+          "fov": 35,
+          "state": {
+            "position": {
+              "x": -207.0805726169063,
+              "y": 128.91410485433042,
+              "z": -69.02621028176317
+            },
+            "target": {
+              "x": 44.92769607939225,
+              "y": 8.262180775725177,
+              "z": 36.790427956213634
+            },
+            "zoom": 1,
+            "cameraType": "perspective",
+            "quaternion": {
+              "x": -0.11423058009544813,
+              "y": -0.8148863618573752,
+              "z": -0.17185671349010326,
+              "w": 0.541642743751164
+            },
+            "fov": 35,
+            "aspect": 1.4026622296173046,
+            "near": 0.01,
+            "far": 10000,
+            "frustum": {
+              "left": -5,
+              "right": 5,
+              "top": 5,
+              "bottom": -5
+            }
+          }
+        },
+        "Light Config": {
+          "intensity": 3,
+          "hdri": {
+            "enabled": false,
+            "hdriPath": "",
+            "showAsBackground": false,
+            "intensity": 1
+          }
+        },
+        "Model Config": {
+          "upDirection": "original",
+          "materialMode": "original",
+          "showSkeleton": false,
+          "gizmo": {
+            "enabled": false,
+            "mode": "translate",
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      },
+      "widgets_values": [
+        "hymotion_retarget/retarget_test_000.fbx",
+        ""
+      ],
+      "widgets_values_named": {
+        "model_file": "hymotion_retarget/retarget_test_000.fbx",
+        "image": ""
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 1,
+      "type": "HYMotionNPZToSMPLParams",
+      "pos": [
+        796.0102753166885,
+        1007.3607009134726
+      ],
+      "size": [
+        326.9693359375,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "npz_path",
+          "type": "STRING",
+          "widget": {
+            "name": "npz_path"
+          },
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "smpl_params",
+          "type": "SMPL_PARAMS",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "PozzettiAndrea/ComfyUI-HyMotion",
+        "ver": "7858ac064e19f126e56382c070ced3ef111aa4b6",
+        "Node name for S&R": "HYMotionNPZToSMPLParams",
+        "cnr_id": "ComfyUI-HyMotion"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "npz_path": ""
+      }
+    },
+    {
+      "id": 3,
+      "type": "HYMotionSMPLToData",
+      "pos": [
+        1224.2514449445268,
+        991.8426184220372
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "smpl_params",
+          "type": "SMPL_PARAMS",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "motion_data",
+          "type": "HYMOTION_DATA",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "PozzettiAndrea/ComfyUI-HyMotion",
+        "ver": "7858ac064e19f126e56382c070ced3ef111aa4b6",
+        "Node name for S&R": "HYMotionSMPLToData",
+        "cnr_id": "ComfyUI-HyMotion"
+      },
+      "widgets_values": [
+        "",
+        0
+      ],
+      "widgets_values_named": {
+        "text": "",
+        "duration": 0
+      }
+    },
+    {
+      "id": 15,
+      "type": "GVHMRInference",
+      "pos": [
+        449.10049567265906,
+        974.2839320380916
+      ],
+      "size": [
+        272.578125,
+        262
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 346
+        },
+        {
+          "name": "video_mask",
+          "type": "VIDEO",
+          "link": 355
+        },
+        {
+          "name": "config",
+          "type": "GVHMR_CONFIG",
+          "link": 12
+        },
+        {
+          "name": "intrinsics",
+          "shape": 7,
+          "type": "INTRINSICS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "npz_path",
+          "type": "STRING",
+          "links": [
+            13
+          ]
+        },
+        {
+          "name": "camera_npz_path",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-motioncapture",
+        "ver": "ff2f8ab242e09125ed640b4b944aeca76be4d2fb",
+        "Node name for S&R": "GVHMRInference"
+      },
+      "widgets_values": [
+        false,
+        0,
+        1.2,
+        "simple_vo",
+        0.5,
+        22,
+        32
+      ],
+      "widgets_values_named": {
+        "moving_camera": false,
+        "focal_length_mm": 0,
+        "bbox_scale": 1.2,
+        "vo_method": "simple_vo",
+        "vo_scale": 0.5,
+        "vo_step": 22,
+        "chunk_size": 32
+      }
+    },
+    {
+      "id": 16,
+      "type": "LoadGVHMRModels",
+      "pos": [
+        114.2298936014508,
+        1008.011597613724
+      ],
+      "size": [
+        276.740234375,
+        130
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "config",
+          "type": "GVHMR_CONFIG",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-motioncapture",
+        "ver": "0a313b6cbd87f105051ef640ca981340f3b76587",
+        "Node name for S&R": "LoadGVHMRModels",
+        "aux_id": "PozzettiAndrea/ComfyUI-MotionCapture"
+      },
+      "widgets_values": [
+        "",
+        "auto",
+        "auto",
+        false
+      ],
+      "widgets_values_named": {
+        "model_path_override": "",
+        "precision": "auto",
+        "attention": "auto",
+        "load_dpvo": false
+      }
+    },
+    {
+      "id": 158,
+      "type": "LoadVideo",
+      "pos": [
+        -381.83953497106603,
+        1457.4991071424934
+      ],
+      "size": [
+        283.27083587646484,
+        577.5925971137153
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            340,
+            346
+          ]
+        }
+      ],
+      "title": "source video",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "Eminem_hd.mp4",
+        "image"
+      ],
+      "widgets_values_named": {
+        "file": "Eminem_hd.mp4",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 163,
+      "type": "GetVideoComponents",
+      "pos": [
+        71.93378660973546,
+        641.8066533564152
+      ],
+      "size": [
+        194.2541717529297,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 340
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            356
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            353
+          ]
+        },
+        {
+          "name": "bit_depth",
+          "type": "COMBO",
+          "links": []
+        },
+        {
+          "name": "color_space",
+          "type": "COMBO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "GetVideoComponents"
+      }
+    },
+    {
+      "id": 167,
+      "type": "PrimitiveString",
+      "pos": [
+        -383.18783552158493,
+        1211.8091846777543
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            347
+          ]
+        }
+      ],
+      "title": "filename_prefix",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "retarget_test"
+      ],
+      "widgets_values_named": {
+        "value": "retarget_test"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 168,
+      "type": "PrimitiveString",
+      "pos": [
+        -377.4993228783542,
+        1340.221873015886
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            348
+          ]
+        }
+      ],
+      "title": "output_dir",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "hymotion_retarget"
+      ],
+      "widgets_values_named": {
+        "value": "hymotion_retarget"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 170,
+      "type": "Robust Video Matting",
+      "pos": [
+        348.6722366446639,
+        641.1624109723613
+      ],
+      "size": [
+        315,
+        150
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_frames",
+          "type": "IMAGE",
+          "link": 356
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "slot_index": 1,
+          "links": [
+            351
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-video-matting",
+        "ver": "1.0.0",
+        "Node name for S&R": "Robust Video Matting"
+      },
+      "widgets_values": [
+        "resnet50",
+        true,
+        "green",
+        4
+      ],
+      "widgets_values_named": {
+        "backbone": "resnet50",
+        "fp16": true,
+        "bg_color": "green",
+        "batch_size": 4
+      }
+    },
+    {
+      "id": 171,
+      "type": "MaskToImage",
+      "pos": [
+        733.6606293398615,
+        653.4257909140722
+      ],
+      "size": [
+        210,
+        26
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 351
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            354
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 172,
+      "type": "CreateVideo",
+      "pos": [
+        1026.0987905289255,
+        641.8567051407045
+      ],
+      "size": [
+        284.58333587646484,
+        174
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 354
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 353
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            355
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        30,
+        "auto",
+        "sRGB",
+        "auto",
+        "h264"
+      ],
+      "widgets_values_named": {
+        "fps": 30,
+        "bit_depth": "auto",
+        "color_space": "sRGB",
+        "chroma_subsampling": "auto",
+        "codec": "h264"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      0,
+      "SMPL_PARAMS"
+    ],
+    [
+      2,
+      3,
+      0,
+      4,
+      0,
+      "HYMOTION_DATA"
+    ],
+    [
+      4,
+      4,
+      0,
+      6,
+      2,
+      "STRING"
+    ],
+    [
+      12,
+      16,
+      0,
+      15,
+      2,
+      "GVHMR_CONFIG"
+    ],
+    [
+      13,
+      15,
+      0,
+      1,
+      0,
+      "STRING"
+    ],
+    [
+      340,
+      158,
+      0,
+      163,
+      0,
+      "VIDEO"
+    ],
+    [
+      346,
+      158,
+      0,
+      15,
+      0,
+      "VIDEO"
+    ],
+    [
+      347,
+      167,
+      0,
+      4,
+      2,
+      "STRING"
+    ],
+    [
+      348,
+      168,
+      0,
+      4,
+      1,
+      "STRING"
+    ],
+    [
+      351,
+      170,
+      1,
+      171,
+      0,
+      "MASK"
+    ],
+    [
+      353,
+      163,
+      2,
+      172,
+      2,
+      "FLOAT"
+    ],
+    [
+      354,
+      171,
+      0,
+      172,
+      0,
+      "IMAGE"
+    ],
+    [
+      355,
+      172,
+      0,
+      15,
+      1,
+      "VIDEO"
+    ],
+    [
+      356,
+      163,
+      0,
+      170,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 3,
+      "title": "input",
+      "bounding": [
+        -393.1878355215848,
+        1141.8091846777547,
+        304.61913642698374,
+        903.2825195784554
+      ],
+      "color": "#8A8",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "create animation",
+      "bounding": [
+        69.74457643609298,
+        863.8528924329863,
+        2061.7957605314177,
+        508.76837552715483
+      ],
+      "color": "#b58b2a",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "mask",
+      "bounding": [
+        61.93378660973546,
+        571.1624109723613,
+        1258.7483397956548,
+        254.69429416834328
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6115909044841539,
+      "offset": [
+        285.04033041047217,
+        -346.40363979683383
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.57.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
