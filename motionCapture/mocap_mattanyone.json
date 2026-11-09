@@ -1,22 +1,22 @@
 {
   "id": "53916bf0-f330-4455-a731-51d6cc4da157",
   "revision": 0,
-  "last_node_id": 168,
-  "last_link_id": 348,
+  "last_node_id": 204,
+  "last_link_id": 367,
   "nodes": [
     {
       "id": 4,
       "type": "HYMotionRetargetFBX",
       "pos": [
-        1843.2565479050097,
-        972.6212679601409
+        1810.6206964695232,
+        974.4671653904799
       ],
       "size": [
         278.2837890625,
         390
       ],
       "flags": {},
-      "order": 13,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -106,7 +106,7 @@
         811.1446940107619
       ],
       "flags": {},
-      "order": 14,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -135,7 +135,7 @@
         "cnr_id": "comfy-core",
         "ver": "0.13.0",
         "Node name for S&R": "Preview3D",
-        "Last Time Model File": "hymotion_retarget/retarget_test_000.fbx",
+        "Last Time Model File": "hymotion_retarget/steps_jump_000.fbx",
         "Scene Config": {
           "showGrid": true,
           "backgroundColor": "#282828",
@@ -167,25 +167,25 @@
           "fov": 35,
           "state": {
             "position": {
-              "x": 441.7930453787667,
-              "y": 311.8251292340697,
-              "z": 442.9322575751065
+              "x": -148.2715035918641,
+              "y": 94.1716829342721,
+              "z": -196.29936512513513
             },
             "target": {
-              "x": 9.001647143236369e-7,
-              "y": 90.4266031063679,
-              "z": 1.1392130965045473
+              "x": 4.787248607488503,
+              "y": -10.460729083902345,
+              "z": -12.545502150415937
             },
             "zoom": 1,
             "cameraType": "perspective",
             "quaternion": {
-              "x": -0.15655493167204207,
-              "y": 0.3771491126562459,
-              "z": 0.06484717595495303,
-              "w": 0.9105185028116869
+              "x": 0.06968221407980148,
+              "y": 0.9203875026573454,
+              "z": 0.19253286335941577,
+              "w": -0.33311008768834427
             },
             "fov": 35,
-            "aspect": 1.522198731501057,
+            "aspect": 1.4026622296173046,
             "near": 0.01,
             "far": 10000,
             "frustum": {
@@ -231,11 +231,11 @@
         }
       },
       "widgets_values": [
-        "hymotion_retarget/retarget_test_000.fbx",
+        "hymotion_retarget/steps_jump_000.fbx",
         ""
       ],
       "widgets_values_named": {
-        "model_file": "hymotion_retarget/retarget_test_000.fbx",
+        "model_file": "hymotion_retarget/steps_jump_000.fbx",
         "image": ""
       },
       "color": "#223",
@@ -253,7 +253,7 @@
         58
       ],
       "flags": {},
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -299,7 +299,7 @@
         200
       ],
       "flags": {},
-      "order": 12,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -344,7 +344,7 @@
         262
       ],
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -459,8 +459,8 @@
       "id": 158,
       "type": "LoadVideo",
       "pos": [
-        -381.83953497106603,
-        1457.4991071424934
+        -376.7492777534266,
+        1407.4517923553494
       ],
       "size": [
         283.27083587646484,
@@ -488,11 +488,11 @@
         "Node name for S&R": "LoadVideo"
       },
       "widgets_values": [
-        "Eminem_hd.mp4",
+        "steps_jump.mp4",
         "image"
       ],
       "widgets_values_named": {
-        "file": "Eminem_hd.mp4",
+        "file": "steps_jump.mp4",
         "upload": "image"
       },
       "color": "#232",
@@ -512,7 +512,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -610,7 +610,7 @@
         26
       ],
       "flags": {},
-      "order": 7,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -646,7 +646,7 @@
         262
       ],
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -781,7 +781,7 @@
         174
       ],
       "flags": {},
-      "order": 9,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -837,17 +837,26 @@
       "id": 167,
       "type": "PrimitiveString",
       "pos": [
-        -383.18783552158493,
-        1211.8091846777543
+        -378.0975783039455,
+        1161.7618698906103
       ],
       "size": [
         270,
         58
       ],
       "flags": {},
-      "order": 2,
+      "order": 8,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": 367
+        }
+      ],
       "outputs": [
         {
           "name": "STRING",
@@ -876,15 +885,15 @@
       "id": 168,
       "type": "PrimitiveString",
       "pos": [
-        -377.4993228783542,
-        1340.221873015886
+        -372.4090656607147,
+        1290.1745582287422
       ],
       "size": [
         270,
         58
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -907,6 +916,118 @@
       ],
       "widgets_values_named": {
         "value": "hymotion_retarget"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 192,
+      "type": "WidgetToString",
+      "pos": [
+        -1145.595396849072,
+        1173.9985821193573
+      ],
+      "size": [
+        294.8333282470703,
+        154
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_input",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            366
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "ab72eda7ffad6280422d71ab7d54d3fb87c0ba18",
+        "Node name for S&R": "WidgetToString"
+      },
+      "widgets_values": [
+        158,
+        "file",
+        false,
+        "",
+        2
+      ],
+      "widgets_values_named": {
+        "id": 158,
+        "widget_name": "file",
+        "return_all": false,
+        "node_title": "",
+        "allowed_float_decimals": 2
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 203,
+      "type": "RegexReplace",
+      "pos": [
+        -808.247597196975,
+        1151.7730681828255
+      ],
+      "size": [
+        401.308043967141,
+        292
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "widget": {
+            "name": "string"
+          },
+          "link": 366
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            367
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "RegexReplace"
+      },
+      "widgets_values": [
+        "",
+        "\\.(.*)",
+        "",
+        false,
+        false,
+        false,
+        0
+      ],
+      "widgets_values_named": {
+        "string": "",
+        "regex_pattern": "\\.(.*)",
+        "replace": "",
+        "case_insensitive": false,
+        "multiline": false,
+        "dotall": false,
+        "count": 0
       },
       "color": "#232",
       "bgcolor": "#353"
@@ -1034,6 +1155,14 @@
       "VIDEO"
     ],
     [
+      348,
+      168,
+      0,
+      4,
+      1,
+      "STRING"
+    ],
+    [
       347,
       167,
       0,
@@ -1042,11 +1171,19 @@
       "STRING"
     ],
     [
-      348,
-      168,
+      366,
+      192,
       0,
-      4,
-      1,
+      203,
+      0,
+      "STRING"
+    ],
+    [
+      367,
+      203,
+      0,
+      167,
+      0,
       "STRING"
     ]
   ],
@@ -1064,18 +1201,6 @@
       "flags": {}
     },
     {
-      "id": 3,
-      "title": "input",
-      "bounding": [
-        -393.1878355215848,
-        1141.8091846777547,
-        304.61913642698374,
-        903.2825195784554
-      ],
-      "color": "#8A8",
-      "flags": {}
-    },
-    {
       "id": 5,
       "title": "create animation",
       "bounding": [
@@ -1086,6 +1211,18 @@
       ],
       "color": "#b58b2a",
       "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "input",
+      "bounding": [
+        -1155.595396849072,
+        1081.7730681828255,
+        1072.11695497211,
+        913.2713212862393
+      ],
+      "color": "#8A8",
+      "flags": {}
     }
   ],
   "definitions": {
@@ -1094,9 +1231,9 @@
         "id": "b149f68b-eaae-486e-98ab-a4b5e73ee316",
         "version": 1,
         "state": {
-          "lastGroupId": 5,
-          "lastNodeId": 168,
-          "lastLinkId": 348,
+          "lastGroupId": 7,
+          "lastNodeId": 204,
+          "lastLinkId": 367,
           "lastRerouteId": 4
         },
         "revision": 0,
@@ -1432,9 +1569,9 @@
         "id": "0b284a07-4b39-4463-ad78-272e9ebbe421",
         "version": 1,
         "state": {
-          "lastGroupId": 5,
-          "lastNodeId": 168,
-          "lastLinkId": 348,
+          "lastGroupId": 7,
+          "lastNodeId": 204,
+          "lastLinkId": 367,
           "lastRerouteId": 4
         },
         "revision": 0,
@@ -1876,10 +2013,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5054470284992995,
+      "scale": 0.5054470284992958,
       "offset": [
-        675.333312078613,
-        -229.42236787096118
+        815.069157265589,
+        -464.2518006599044
       ]
     },
     "workflowRendererVersion": "LG",

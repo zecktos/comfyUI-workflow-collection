@@ -1,8 +1,8 @@
 {
   "id": "f6fc7b20-9b0b-4ae6-87ec-f7fcdeca2310",
   "revision": 0,
-  "last_node_id": 172,
-  "last_link_id": 356,
+  "last_node_id": 174,
+  "last_link_id": 358,
   "nodes": [
     {
       "id": 4,
@@ -16,7 +16,7 @@
         390
       ],
       "flags": {},
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -106,7 +106,7 @@
         811.1446940107619
       ],
       "flags": {},
-      "order": 12,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -135,7 +135,7 @@
         "cnr_id": "comfy-core",
         "ver": "0.13.0",
         "Node name for S&R": "Preview3D",
-        "Last Time Model File": "hymotion_retarget/retarget_test_000.fbx",
+        "Last Time Model File": "hymotion_retarget/drehung_arme_000.fbx",
         "Scene Config": {
           "showGrid": true,
           "backgroundColor": "#282828",
@@ -167,25 +167,25 @@
           "fov": 35,
           "state": {
             "position": {
-              "x": -207.0805726169063,
-              "y": 128.91410485433042,
-              "z": -69.02621028176317
+              "x": 21.770345436829135,
+              "y": 22.097777331205386,
+              "z": 22.092793143287462
             },
             "target": {
-              "x": 44.92769607939225,
-              "y": 8.262180775725177,
-              "z": 36.790427956213634
+              "x": -0.21662653361155862,
+              "y": 0.11080536076478611,
+              "z": 0.1058211728467702
             },
             "zoom": 1,
             "cameraType": "perspective",
             "quaternion": {
-              "x": -0.11423058009544813,
-              "y": -0.8148863618573752,
-              "z": -0.17185671349010326,
-              "w": 0.541642743751164
+              "x": -0.2798481423331204,
+              "y": 0.3647051996310009,
+              "z": 0.11591689595929475,
+              "w": 0.8804762392171498
             },
             "fov": 35,
-            "aspect": 1.4026622296173046,
+            "aspect": 1.3151326053042123,
             "near": 0.01,
             "far": 10000,
             "frustum": {
@@ -231,11 +231,11 @@
         }
       },
       "widgets_values": [
-        "hymotion_retarget/retarget_test_000.fbx",
+        "hymotion_retarget/drehung_arme_000.fbx",
         ""
       ],
       "widgets_values_named": {
-        "model_file": "hymotion_retarget/retarget_test_000.fbx",
+        "model_file": "hymotion_retarget/drehung_arme_000.fbx",
         "image": ""
       },
       "color": "#223",
@@ -253,7 +253,7 @@
         58
       ],
       "flags": {},
-      "order": 9,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -299,7 +299,7 @@
         200
       ],
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -344,7 +344,7 @@
         262
       ],
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -487,11 +487,11 @@
         "Node name for S&R": "LoadVideo"
       },
       "widgets_values": [
-        "Eminem_hd.mp4",
+        "steps_jump.mp4",
         "image"
       ],
       "widgets_values_named": {
-        "file": "Eminem_hd.mp4",
+        "file": "steps_jump.mp4",
         "upload": "image"
       },
       "color": "#232",
@@ -567,9 +567,18 @@
         58
       ],
       "flags": {},
-      "order": 2,
+      "order": 7,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": 358
+        }
+      ],
       "outputs": [
         {
           "name": "STRING",
@@ -606,7 +615,7 @@
         58
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -645,7 +654,7 @@
         150
       ],
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -700,7 +709,7 @@
         26
       ],
       "flags": {},
-      "order": 6,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -737,7 +746,7 @@
         174
       ],
       "flags": {},
-      "order": 7,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -788,6 +797,118 @@
         "chroma_subsampling": "auto",
         "codec": "h264"
       }
+    },
+    {
+      "id": 173,
+      "type": "WidgetToString",
+      "pos": [
+        -1194.9062994819187,
+        1250.2191851079153
+      ],
+      "size": [
+        294.8333282470703,
+        154
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_input",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            357
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "ab72eda7ffad6280422d71ab7d54d3fb87c0ba18",
+        "Node name for S&R": "WidgetToString"
+      },
+      "widgets_values": [
+        158,
+        "file",
+        false,
+        "",
+        2
+      ],
+      "widgets_values_named": {
+        "id": 158,
+        "widget_name": "file",
+        "return_all": false,
+        "node_title": "",
+        "allowed_float_decimals": 2
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 174,
+      "type": "RegexReplace",
+      "pos": [
+        -857.5584998298223,
+        1227.9936711713838
+      ],
+      "size": [
+        401.308043967141,
+        292
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "widget": {
+            "name": "string"
+          },
+          "link": 357
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            358
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "RegexReplace"
+      },
+      "widgets_values": [
+        "",
+        "\\.(.*)",
+        "",
+        false,
+        false,
+        false,
+        0
+      ],
+      "widgets_values_named": {
+        "string": "",
+        "regex_pattern": "\\.(.*)",
+        "replace": "",
+        "case_insensitive": false,
+        "multiline": false,
+        "dotall": false,
+        "count": 0
+      },
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -848,22 +969,6 @@
       "VIDEO"
     ],
     [
-      347,
-      167,
-      0,
-      4,
-      2,
-      "STRING"
-    ],
-    [
-      348,
-      168,
-      0,
-      4,
-      1,
-      "STRING"
-    ],
-    [
       351,
       170,
       1,
@@ -902,21 +1007,41 @@
       170,
       0,
       "IMAGE"
+    ],
+    [
+      348,
+      168,
+      0,
+      4,
+      1,
+      "STRING"
+    ],
+    [
+      347,
+      167,
+      0,
+      4,
+      2,
+      "STRING"
+    ],
+    [
+      357,
+      173,
+      0,
+      174,
+      0,
+      "STRING"
+    ],
+    [
+      358,
+      174,
+      0,
+      167,
+      0,
+      "STRING"
     ]
   ],
   "groups": [
-    {
-      "id": 3,
-      "title": "input",
-      "bounding": [
-        -393.1878355215848,
-        1141.8091846777547,
-        304.61913642698374,
-        903.2825195784554
-      ],
-      "color": "#8A8",
-      "flags": {}
-    },
     {
       "id": 5,
       "title": "create animation",
@@ -940,15 +1065,27 @@
       ],
       "color": "#3f789e",
       "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "input",
+      "bounding": [
+        -1204.9062994819187,
+        1141.8091846777543,
+        1116.3376003873175,
+        903.2825195784544
+      ],
+      "color": "#8A8",
+      "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6115909044841539,
+      "scale": 0.6727499949325697,
       "offset": [
-        285.04033041047217,
-        -346.40363979683383
+        1309.2937783071218,
+        -733.8006018030134
       ]
     },
     "workflowRendererVersion": "LG",
