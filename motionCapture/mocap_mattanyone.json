@@ -1,8 +1,8 @@
 {
   "id": "53916bf0-f330-4455-a731-51d6cc4da157",
   "revision": 0,
-  "last_node_id": 204,
-  "last_link_id": 367,
+  "last_node_id": 205,
+  "last_link_id": 368,
   "nodes": [
     {
       "id": 4,
@@ -16,7 +16,7 @@
         390
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -98,15 +98,15 @@
       "id": 6,
       "type": "Preview3D",
       "pos": [
-        945.4030943869607,
-        1445.9847101336843
+        768.7459939620531,
+        1373.3097382816122
       ],
       "size": [
-        862.9207434730033,
-        811.1446940107619
+        999.0791202527685,
+        956.7399630907967
       ],
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -135,7 +135,7 @@
         "cnr_id": "comfy-core",
         "ver": "0.13.0",
         "Node name for S&R": "Preview3D",
-        "Last Time Model File": "hymotion_retarget/steps_jump_000.fbx",
+        "Last Time Model File": "animation/catwalk_torso_bend_halftime_000.fbx",
         "Scene Config": {
           "showGrid": true,
           "backgroundColor": "#282828",
@@ -167,25 +167,25 @@
           "fov": 35,
           "state": {
             "position": {
-              "x": -148.2715035918641,
-              "y": 94.1716829342721,
-              "z": -196.29936512513513
+              "x": 83.03697460996027,
+              "y": 79.5821326155482,
+              "z": -384.0747293712823
             },
             "target": {
-              "x": 4.787248607488503,
-              "y": -10.460729083902345,
-              "z": -12.545502150415937
+              "x": -7.272990941846264,
+              "y": -17.62726282372381,
+              "z": -79.44794118698961
             },
             "zoom": 1,
             "cameraType": "perspective",
             "quaternion": {
-              "x": 0.06968221407980148,
-              "y": 0.9203875026573454,
-              "z": 0.19253286335941577,
-              "w": -0.33311008768834427
+              "x": -0.02124032391858944,
+              "y": 0.9787502192421357,
+              "z": 0.14637469617415808,
+              "w": 0.1420257205340906
             },
             "fov": 35,
-            "aspect": 1.4026622296173046,
+            "aspect": 1.3105756358768408,
             "near": 0.01,
             "far": 10000,
             "frustum": {
@@ -231,11 +231,11 @@
         }
       },
       "widgets_values": [
-        "hymotion_retarget/steps_jump_000.fbx",
+        "animation/catwalk_torso_bend_halftime_000.fbx",
         ""
       ],
       "widgets_values_named": {
-        "model_file": "hymotion_retarget/steps_jump_000.fbx",
+        "model_file": "animation/catwalk_torso_bend_halftime_000.fbx",
         "image": ""
       },
       "color": "#223",
@@ -253,7 +253,7 @@
         58
       ],
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -299,7 +299,7 @@
         200
       ],
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -344,7 +344,7 @@
         262
       ],
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -416,8 +416,8 @@
       "id": 16,
       "type": "LoadGVHMRModels",
       "pos": [
-        114.2298936014508,
-        1008.011597613724
+        93.39550353590828,
+        1000.6583219737565
       ],
       "size": [
         276.740234375,
@@ -453,7 +453,8 @@
         "precision": "auto",
         "attention": "auto",
         "load_dpvo": false
-      }
+      },
+      "shape": 2
     },
     {
       "id": 158,
@@ -624,7 +625,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            339
+            339,
+            368
           ]
         }
       ],
@@ -781,7 +783,7 @@
         174
       ],
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -912,10 +914,10 @@
         "Node name for S&R": "PrimitiveString"
       },
       "widgets_values": [
-        "hymotion_retarget"
+        "animation"
       ],
       "widgets_values_named": {
-        "value": "hymotion_retarget"
+        "value": "animation"
       },
       "color": "#232",
       "bgcolor": "#353"
@@ -951,6 +953,7 @@
           ]
         }
       ],
+      "title": "get video file name",
       "properties": {
         "cnr_id": "comfyui-kjnodes",
         "ver": "ab72eda7ffad6280422d71ab7d54d3fb87c0ba18",
@@ -1006,6 +1009,7 @@
           ]
         }
       ],
+      "title": "remove file extension",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.44.0",
@@ -1031,6 +1035,45 @@
       },
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 205,
+      "type": "PreviewImage",
+      "pos": [
+        207.57103101273674,
+        1402.0403087887862
+      ],
+      "size": [
+        518.149312694298,
+        429.7948382636421
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 368
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "Preview Mask",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -1155,6 +1198,22 @@
       "VIDEO"
     ],
     [
+      366,
+      192,
+      0,
+      203,
+      0,
+      "STRING"
+    ],
+    [
+      367,
+      203,
+      0,
+      167,
+      0,
+      "STRING"
+    ],
+    [
       348,
       168,
       0,
@@ -1171,20 +1230,12 @@
       "STRING"
     ],
     [
-      366,
-      192,
+      368,
+      161,
       0,
-      203,
+      205,
       0,
-      "STRING"
-    ],
-    [
-      367,
-      203,
-      0,
-      167,
-      0,
-      "STRING"
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -1232,8 +1283,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 7,
-          "lastNodeId": 204,
-          "lastLinkId": 367,
+          "lastNodeId": 205,
+          "lastLinkId": 368,
           "lastRerouteId": 4
         },
         "revision": 0,
@@ -1570,8 +1621,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 7,
-          "lastNodeId": 204,
-          "lastLinkId": 367,
+          "lastNodeId": 205,
+          "lastLinkId": 368,
           "lastRerouteId": 4
         },
         "revision": 0,
@@ -2013,10 +2064,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5054470284992958,
+      "scale": 0.7898500632730171,
       "offset": [
-        815.069157265589,
-        -464.2518006599044
+        684.4877889345073,
+        -837.5632617795173
       ]
     },
     "workflowRendererVersion": "LG",
